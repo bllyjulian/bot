@@ -3,11 +3,11 @@
   "routes": [
     {
       "src": "/getUpdates",
-      "dest": "/api/main"
+      "dest": "/main.py"
     },
     {
       "src": "/(.*)",
-      "dest": "/api/main"
+      "dest": "/main.py"
     }
   ]
 }
