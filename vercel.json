@@ -1,15 +1,13 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "your-bot-script.py",
-      "use": "@vercel/python"
-    }
-  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/your-bot-script.py" }
-  ],
-  "env": {
-    "TELEGRAM_BOT_TOKEN": "6654248660:AAEM9hTXwzeTuKMTE_HDQAt_ZSQAxLQg5N4"
-  }
+    {
+      "src": "/getUpdates",
+      "dest": "/api/main"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/main"
+    }
+  ]
 }

@@ -8,6 +8,20 @@ from telegram.ext import (
 import requests
 import os
 import logging
+from fastapi import FastAPI
+
+app = FastAPI()
+
+# Handle the route for /getUpdates
+@app.post("/getUpdates")
+def get_updates():
+    # Your code to handle /getUpdates goes here
+    pass
+
+# Handle the default route
+@app.get("/")
+def default_route():
+    return {"message": "Hello, this is your default route!"}
 
 # TikTok Downloader API
 API = 'https://api.single-developers.software/tiktok?url='
