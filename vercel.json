@@ -1,19 +1,5 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/getUpdates",
-      "dest": "/main.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/main.py"
-    }
-  ],
-  "functions": {
-    "main.py": {
-      "runtime": "python3.9",
-      "memory": 1024
-    }
-  }
+  "builds": [{ "src": "/main.py", "use": "@now/python" }],
+  "routes": [{ "src": "/.*", "dest": "/main.py" }]
 }
