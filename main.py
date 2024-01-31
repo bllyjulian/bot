@@ -118,5 +118,6 @@ def main() -> None:
 
     app.run_polling()
 
-if __name__ == '__main__':
-    main()  # 😁 Start
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
