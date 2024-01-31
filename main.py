@@ -120,4 +120,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     import uvicorn
+    from fastapi import FastAPI
+
+    app = FastAPI() 
+
+    # Tambahkan pengaturan route, handler, dll. sesuai kebutuhan
+
     uvicorn.run(app, host="0.0.0.0", port=8000)

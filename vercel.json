@@ -3,15 +3,15 @@
   "routes": [
     {
       "src": "/getUpdates",
-      "dest": "/api/main"
+      "dest": "/main.py"
     },
     {
       "src": "/(.*)",
-      "dest": "/api/main"
+      "dest": "/main.py"
     }
   ],
   "functions": {
-    "api/main": {
+    "main.py": {
       "runtime": "python3.9",
       "memory": 1024
     }
