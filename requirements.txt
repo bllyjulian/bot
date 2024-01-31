@@ -1,2 +1,4 @@
 requests
 python-telegram-bot
+Flask==2.0.1
+httpx==0.23.0

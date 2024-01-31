@@ -30,7 +30,7 @@ async def Download_Video(Link, update, context):
     no_watermark = None
     watermark = None
 
-    status_msg = await message.reply_text('🚀 DOᗯᑎᒪOᗩᗪIᑎG Video TO Sᕮᖇᐯᕮᖇ ....')
+    status_msg = await message.reply_text('🚀 Proses bntar')
     status_sticker = await message.reply_sticker('CAACAgUAAxkBAAED9jhiDqYeGjENlCjftByz0au6n4YAASEAAnUEAALpa8lXL9cvxeTK-2AjBA')
 
     # Getting Download Links Using API
@@ -41,7 +41,7 @@ async def Download_Video(Link, update, context):
         print('Download Links Generated \n\n\n' + str(req) + '\n\n\n')
     except Exception as e:
         print(f'Download Links Generate Error: {e}')
-        await status_msg.edit_text(f'⁉️ TikTok Downloader API Error: {e}\n\nReport To Developer : @SL_Developers')
+        await status_msg.edit_text(f'test munculin error di bot aja: \n\n{e}\n\n')
         await status_sticker.delete()
         return
 
@@ -80,9 +80,9 @@ async def start_handler(update, context):
     await update.message.reply_sticker('CAACAgUAAxkBAAED9kRiDq_GkOHuRHPeVv4IRhsvy4NtbwACqQQAAncUyFftN80YUiyXnyME')
 
 # About Handler
-async def about_handler(update, context):
-    await update.message.reply_sticker('CAACAgUAAxkBAAED9kZiDq_LFrib38c7DYu3jNz3ebsolgACJAUAAuTb4FdKtjtZGQ2ukiME')
-    await update.message.reply_text('tes',
+async def tesdulu_handler(update, context):
+    # await update.message.reply_sticker('CAACAgUAAxkBAAED9kZiDq_LFrib38c7DYu3jNz3ebsolgACJAUAAuTb4FdKtjtZGQ2ukiME')
+    await update.message.reply_text('aman',
                               parse_mode=_ParseMode)
 
 def error_handler(update, context):
@@ -94,7 +94,7 @@ def main() -> None:
     # Commands Listning
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start_handler))
-    app.add_handler(CommandHandler("about", about_handler))
+    app.add_handler(CommandHandler("tes", tesdulu_handler))
 
     # Message Incoming Action
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, incoming_message_action))

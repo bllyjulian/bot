@@ -6,7 +6,7 @@
   "keywords": ["telegram", "bot", "api", "tiktok", "tiktok-api"],
   "env": {
     "BOT_TOKEN": {
-            "description": "API Token for your Telegram bot (Take it from @BotFather)",
+            "description": "A6654248660:AAEM9hTXwzeTuKMTE_HDQAt_ZSQAxLQg5N4",
             "required": true
     }
   }
